@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
+
 export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
@@ -12,6 +13,7 @@ export const AuthProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem("authTokens"))
       : null
   );
+  const navigate = useNavigate();
   const [user, setUser] = useState(() =>
     localStorage.getItem("authTokens")
       ? jwt_decode(localStorage.getItem("authTokens"))
@@ -19,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   );
   const [loading, setLoading] = useState(true);
 
-  const history = useNavigate();
+  // const history = useNavigate();
 
   const loginUser = async (username, password) => {
     const response = await fetch("http://127.0.0.1:8000/auth/token/", {
@@ -38,7 +40,7 @@ export const AuthProvider = ({ children }) => {
       setAuthTokens(data);
       setUser(jwt_decode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
-      history.push("/");
+      navigate("/");
     } else {
       alert("Something went wrong!");
     }
@@ -57,7 +59,7 @@ export const AuthProvider = ({ children }) => {
       })
     });
     if (response.status === 201) {
-      history.push("/login");
+      navigate("/login");
     } else {
       alert("Something went wrong!");
     }
@@ -67,7 +69,7 @@ export const AuthProvider = ({ children }) => {
     setAuthTokens(null);
     setUser(null);
     localStorage.removeItem("authTokens");
-    history.push("/");
+    navigate("/");
   };
 
   const contextData = {

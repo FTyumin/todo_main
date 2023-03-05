@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import React from "react";
+import "../css/sidebar.css";
+import ProtectedPage from "../utils/ProtectedPage"
 
 const SideBar = () => {
   const { user, logoutUser } = useContext(AuthContext);

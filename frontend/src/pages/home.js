@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "../components/Modal";
 import axios from "axios";
+import SideBar from "../components/SideBar";
 
 class Home extends Component {
   constructor(props) {
@@ -114,6 +115,7 @@ class Home extends Component {
   render() {
     return (
       <main className="content">
+        
         <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
         <div className="row ">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
