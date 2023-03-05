@@ -45,25 +45,31 @@ export const AuthProvider = ({ children }) => {
       alert("Something went wrong!");
     }
   };
-  
+  /* password has to be atleast 8 characters */
   const registerUser = async (username, password, password2) => {
-    const response = await fetch("http://127.0.0.1:8000/auth/register/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        username,
-        password,
-        password2
-      })
-    });
-    if (response.status === 201) {
-      navigate("/login");
-    } else {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/auth/register/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          password2
+        })
+      });
+      console.log(response);
+      if (response.status === 201) {
+        navigate("/login");
+      } else {
+        alert("Something went wrong!");
+      }
+    } catch (error) {
+      console.log(error);
       alert("Something went wrong!");
     }
-  };
+  };  
 
   const logoutUser = () => {
     setAuthTokens(null);

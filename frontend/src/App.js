@@ -10,6 +10,7 @@ import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
 import Home from "./pages/home";
+import ProtectedPage from "./utils/ProtectedPage";
 
 
 function App() {
@@ -21,9 +22,11 @@ function App() {
                 <AuthProvider>
                   <SideBar />
                   <Routes>
+                    <Route path="/status" element={<PrivateRoute/>}/>
                     <Route path="/login"  element={<Login/>}  />
                     <Route path="/register" element={<Register/>} />
-                    <Route element={Home} path="/" />
+                    <Route  path="/" element={Home}/>
+
                   </Routes>
                 </AuthProvider>
               </div>
