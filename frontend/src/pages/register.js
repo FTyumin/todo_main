@@ -1,5 +1,7 @@
 import React,{ useState, useContext } from "react";
 import AuthContext from "../context/AuthContext";
+import "../css/index.css";
+
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -25,6 +27,7 @@ function Register() {
             onChange={e => setUsername(e.target.value)}
             placeholder="Username"
             required
+            style={{ marginBottom: "20px"}} 
           />
         </div>
         <div>
@@ -35,6 +38,7 @@ function Register() {
             onChange={e => setPassword(e.target.value)}
             placeholder="Password"
             required
+            style={{ marginBottom: "20px" }} 
           />
         </div>
         <div>
@@ -45,6 +49,7 @@ function Register() {
             onChange={e => setPassword2(e.target.value)}
             placeholder="Confirm Password"
             required
+            style={{ marginBottom: "20px" }} 
           />
           <p>{password2 !== password ? "Passwords do not match" : ""}</p>
         </div>

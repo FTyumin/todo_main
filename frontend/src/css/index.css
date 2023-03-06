@@ -26,3 +26,19 @@ body {
   color: #ffffff;
 }
 
+form div {
+  
+  display: flex;
+  vertical-align: top;
+  margin-right: 30px; 
+}
+label {
+  display: flex; 
+  margin-bottom: 0.5rem;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+}
+

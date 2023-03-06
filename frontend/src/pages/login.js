@@ -1,6 +1,7 @@
 import React,{useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
+
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
   const handleSubmit = e => {
@@ -16,9 +17,9 @@ const Login = () => {
         <h1>Login </h1>
         <hr />
         <label htmlFor="username">Username</label>
-        <input type="text" id="username" placeholder="Enter Username" />
+        <input type="text" id="username" placeholder="Enter Username" style={{ marginBottom: "20px" }}   />
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" placeholder="Enter Password" />
+        <input type="password" id="password" placeholder="Enter Password" style={{ marginBottom: "20px" }}  />
         <button type="submit">Login</button>
       </form>
     </section>
