@@ -1,7 +1,12 @@
 a {
     color:white;
     font-size: 40px;
+    
 }
 a+a {
     margin-left: 100px;
+}
+
+a:link {
+    text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Modal from "../components/Modal";
 import axios from "axios";
 import SideBar from "../components/SideBar";
+import "../css/index.css";
 
 class Home extends Component {
   constructor(props) {

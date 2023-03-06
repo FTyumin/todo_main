@@ -7,10 +7,11 @@ import { AuthProvider } from "./context/AuthContext";
 import Register from "./pages/register"
 import Login from "./pages/login";
 import React, { Component } from "react";
+import User from "./utils/user";
 import Modal from "./components/Modal";
 import axios from "axios";
 import Home from "./pages/home";
-import ProtectedPage from "./utils/ProtectedPage";
+import ProtectedPage from "./utils/user";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
                 <AuthProvider>
                   <SideBar />
                   <Routes>
-                    <Route path="/status" element={<PrivateRoute/>}/>
+                    <Route path="/status" element={<User/>}/>
                     <Route path="/login"  element={<Login/>}  />
                     <Route path="/register" element={<Register/>} />
                     <Route  path="/" element={Home}/>

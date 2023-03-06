@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import React from "react";
 import "../css/sidebar.css";
-import ProtectedPage from "../utils/ProtectedPage"
+import ProtectedPage from "../utils/user";
+import User from "../utils/user";
 
 const SideBar = () => {
   const { user, logoutUser } = useContext(AuthContext);
   return (
     <nav>
       <div>
-        <h1>App Name</h1>
         <div>
           {user ? (
             <>
               <Link to="/">Home</Link>
-              <Link to="/protected">Protected Page</Link>
+              <Link to="/status">Status</Link>
               <button onClick={logoutUser}>Logout</button>
             </>
           ) : (
