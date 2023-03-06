@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import React from "react";
-import "../css/sidebar.css";
+import "../css/navbar.css";
 import ProtectedPage from "../utils/user";
 import User from "../utils/user";
 
-const SideBar = () => {
+const NavBar = () => {
   const { user, logoutUser } = useContext(AuthContext);
   return (
     <nav>
@@ -30,4 +30,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default NavBar;

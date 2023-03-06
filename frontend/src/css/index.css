@@ -31,8 +31,8 @@ form div {
   display: flex;
   vertical-align: top;
   margin-right: 30px; 
-}
-label {
+} 
+ label {
   display: flex; 
   margin-bottom: 0.5rem;
 }

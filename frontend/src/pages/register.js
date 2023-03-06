@@ -27,7 +27,7 @@ function Register() {
             onChange={e => setUsername(e.target.value)}
             placeholder="Username"
             required
-            style={{ marginBottom: "20px"}} 
+            style={{ marginBottom: "20px", marginLeft:"75px"}} 
           />
         </div>
         <div>
@@ -38,7 +38,7 @@ function Register() {
             onChange={e => setPassword(e.target.value)}
             placeholder="Password"
             required
-            style={{ marginBottom: "20px" }} 
+            style={{ marginBottom: "20px",marginLeft:"80px" }} 
           />
         </div>
         <div>
@@ -49,7 +49,7 @@ function Register() {
             onChange={e => setPassword2(e.target.value)}
             placeholder="Confirm Password"
             required
-            style={{ marginBottom: "20px" }} 
+            style={{ marginBottom: "20px",marginLeft:"20px" }} 
           />
           <p>{password2 !== password ? "Passwords do not match" : ""}</p>
         </div>

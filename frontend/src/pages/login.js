@@ -1,5 +1,6 @@
 import React,{useContext } from "react";
 import AuthContext from "../context/AuthContext";
+import "../css/index.css";
 
 
 const Login = () => {
@@ -14,12 +15,31 @@ const Login = () => {
   return (
     <section>
       <form onSubmit={handleSubmit}>
-        <h1>Login </h1>
+      <h1>Register</h1>
         <hr />
-        <label htmlFor="username">Username</label>
-        <input type="text" id="username" placeholder="Enter Username" style={{ marginBottom: "20px" }}   />
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" placeholder="Enter Password" style={{ marginBottom: "20px" }}  />
+        <div>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            
+            placeholder="Username"
+            required
+            style={{ marginBottom: "20px", marginLeft:"75px"}} 
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            
+            placeholder="Password"
+            required
+            style={{ marginBottom: "20px",marginLeft:"80px" }} 
+          />
+        </div>
+        
         <button type="submit">Login</button>
       </form>
     </section>

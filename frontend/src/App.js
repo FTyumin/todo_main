@@ -1,6 +1,6 @@
 import "./css/index.css";
 import "./css/App.css";
-import SideBar from "./components/SideBar";
+import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./utils/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
@@ -21,7 +21,7 @@ function App() {
         <Router>
               <div className="route">
                 <AuthProvider>
-                  <SideBar />
+                  <NavBar />
                   <Routes>
                     <Route path="/status" element={<User/>}/>
                     <Route path="/login"  element={<Login/>}  />
