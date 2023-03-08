@@ -1,15 +1,8 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Input,
-  Label
-} from "reactstrap";
+import {Button, Modal, ModalHeader, ModalBody,
+ModalFooter, Form, FormGroup,Input,Label} from "reactstrap";
+import "../css/index.css";
+
 
 export default class CustomModal extends Component {
   constructor(props) {
@@ -36,23 +29,26 @@ export default class CustomModal extends Component {
         <ModalBody>
           <Form>
             <FormGroup>
-              <Label for="title">Title</Label>
+              <Label for="title" className="form-label">Title</Label>
               <Input
                 type="text"
                 name="title"
                 value={this.state.activeItem.title}
                 onChange={this.handleChange}
                 placeholder="Enter Todo Title"
+                className="input-title"
+                
               />
             </FormGroup>
             <FormGroup>
-              <Label for="description">Description</Label>
+              <Label for="description" className="form-label">Description</Label>
               <Input
                 type="text"
                 name="description"
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
                 placeholder="Enter Todo description"
+                className="input-desc"
               />
             </FormGroup>
             <FormGroup check>
@@ -62,6 +58,7 @@ export default class CustomModal extends Component {
                   name="completed"
                   checked={this.state.activeItem.completed}
                   onChange={this.handleChange}
+                  
                 />
                 Completed
               </Label>

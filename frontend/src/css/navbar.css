@@ -11,3 +11,10 @@ a:link {
     text-decoration: none;
 }
 
+Button {
+    font-size: 30px;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+

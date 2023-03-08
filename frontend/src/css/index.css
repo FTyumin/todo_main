@@ -8,12 +8,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(163, 155, 154);
 }
+
 .todo-title {
   cursor: pointer;
 }
+
 .completed-todo {
   text-decoration: line-through;
 }
+
 .tab-list > span {
   padding: 5px 8px;
   border: 1px solid #282c34;
@@ -21,24 +24,57 @@ body {
   margin-right: 5px;
   cursor: pointer;
 }
+
 .tab-list > span.active {
   background-color: #282c34;
   color: #ffffff;
 }
 
 form div {
-  
   display: flex;
   vertical-align: top;
   margin-right: 30px; 
 } 
+
  label {
   display: flex; 
   margin-bottom: 0.5rem;
 }
 
-button {
+Button {
   display: block;
   margin-top: 20px;
+  font-size: 30px;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-title {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 22%;
+}
+
+.input-desc {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10%;
 }
 
