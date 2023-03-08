@@ -13,9 +13,10 @@ const Login = () => {
   };
 
   return (
+    
     <section>
       <form onSubmit={handleSubmit}>
-      <h1>Register</h1>
+      <h1>Login</h1>
         <hr />
         <div>
           <label htmlFor="username">Username</label>
