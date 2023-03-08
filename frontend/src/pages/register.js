@@ -36,10 +36,11 @@ function Register() {
             type="password"
             id="password"
             onChange={e => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder="At least 8 characters"
             required
             style={{ marginBottom: "20px",marginLeft:"80px" }} 
           />
+          
         </div>
         <div>
           <label htmlFor="confirm-password">Confirm Password</label>
@@ -52,6 +53,7 @@ function Register() {
             style={{ marginBottom: "20px",marginLeft:"20px" }} 
           />
           <p>{password2 !== password ? "Passwords do not match" : ""}</p>
+          
         </div>
         <button>Register</button>
       </form>
